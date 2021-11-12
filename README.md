@@ -5,7 +5,7 @@
 - [Git](https://git-scm.com/downloads) - Version Control
 - [NodeJS](https://nodejs.org/en/download/) - Back-end JavaScript Runtime Environment
 - [NPM](https://www.npmjs.com/) - Node Package Manager (usually comes with NodeJS)
-- [MongoDB](https://www.mongodb.com/) - NoSQL Database
+- [MongoDB](https://www.mongodb.com/try/download/community) - NoSQL Database
 
 ## 🚀 Follow these steps to run the app 
 
