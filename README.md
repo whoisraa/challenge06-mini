@@ -1,4 +1,4 @@
-# 🌾 Binar Challenge 5 Submission 
+# 🌾 Binar miniChallenge 6 Submission 
 
 ## 📋 Prequisites
 ### You'll need these programs installed on your computer
