@@ -50,7 +50,7 @@ router.post('/', async (req, res) => {
                 console.log(line);
                 console.log(`The username "${req.body.username}" and the email "${req.body.email}" already existed`);
                 console.log(line);
-                return res.status(500).render('index', {
+                return res.status(401).render('index', {
                     username: usernameRes,
                     email: emailRes,
                     success: null
@@ -59,7 +59,7 @@ router.post('/', async (req, res) => {
                 console.log(line);
                 console.log(`The username "${req.body.username}" already taken`);
                 console.log(line);
-                return res.status(500).render('index', {
+                return res.status(401).render('index', {
                     username: usernameRes,
                     email: null,
                     success: null
@@ -69,13 +69,15 @@ router.post('/', async (req, res) => {
             console.log(line);
             console.log(`The email "${req.body.email}" already registered`);
             console.log(line);
-            return res.status(500).render('index', {
+            return res.status(401).render('index', {
                 username: null,
                 email: emailRes,
                 success: null
             });
+        } else if (error) {
+            res.status(500).send(`Internal server error`);
+            console.error(error);
         }
-        console.log(error);
     }
 });
 
