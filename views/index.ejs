@@ -21,6 +21,9 @@
             <label for="username" class="small"><span class="text-danger">*</span> Min length 3
               characters</label>
           </div>
+          <div class="text-center text-danger">
+            <label for="username" class="small"><%= username %></label>
+          </div>
         </div>
         <div class="mb-1">
           <label for="password" class="form-label text-white">New password</label>
@@ -38,6 +41,9 @@
             placeholder="Enter your email" aria-describedby="email"
             oninvalid="this.setCustomValidity('Your email, please?')" title="Is it done?" tabindex="3" required>
         </div>
+        <div class="text-center text-danger">
+          <label for="email" class="small"><%= email %></label>
+        </div>
         <div class="form-check text-start mb-3">
           <input class="form-check-input border-1" type="checkbox" value="" id="agreement"
             oninvalid="this.setCustomValidity('Hey, you need to agree this')" tabindex="4" required>
@@ -46,6 +52,9 @@
           </label>
         </div>
         <button type="submit" class="btn btn-primary fw-bold text-uppercase" tabindex="5">submit</button>
+        <div class="text-center text-success mt-3">
+          <label for="submit" class="small fw-bold"><%= success %></label>
+        </div>
       </form>
     </div>
   </main>
