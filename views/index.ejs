@@ -1,0 +1,56 @@
+<html>
+
+<head>
+  <%- include('partials/head') %>
+  <title>miniChallenge - Chapter 6</title>
+</head>
+
+<body>
+  <%- include('partials/navbar') %>
+  <main class="container">
+    <div class="row">
+      <form id="form" class="text-center mx-auto mt-5 w-25" action="/" method="post">
+        <p class="h1 mb-3">Sign Up</p>
+        <div class="mb-1">
+          <label for="username" class="form-label text-white">New username</label>
+          <input type="text" class="form-control text-center border-1 bg-light" id="username" name="username"
+            placeholder="Enter a username" aria-describedby="username" minlength="3"
+            oninvalid="this.setCustomValidity('Oh come on, just fill this properly')" title="Are you sure?" tabindex="1"
+            required>
+          <div class="text-start text-secondary">
+            <label for="username" class="small"><span class="text-danger">*</span> Min length 3
+              characters</label>
+          </div>
+        </div>
+        <div class="mb-1">
+          <label for="password" class="form-label text-white">New password</label>
+          <input type="password" class="form-control text-center border-1 bg-light" id="password" name="password"
+            placeholder="Enter a password" minlength="6"
+            oninvalid="this.setCustomValidity('You care about your account, don\'t you?')"
+            title="Have you entered the password yet?" tabindex="2" required>
+          <div class="text-start text-secondary">
+            <label for="password" class="small"><span class="text-danger">*</span> Min length 6 characters</label>
+          </div>
+        </div>
+        <div class="mb-1">
+          <label for="email" class="form-label text-white">Your Email</label>
+          <input type="email" class="form-control text-center border-1 bg-light" id="email" name="email"
+            placeholder="Enter your email" aria-describedby="email"
+            oninvalid="this.setCustomValidity('Your email, please?')" title="Is it done?" tabindex="3" required>
+        </div>
+        <div class="form-check text-start mb-3">
+          <input class="form-check-input border-1" type="checkbox" value="" id="agreement"
+            oninvalid="this.setCustomValidity('Hey, you need to agree this')" tabindex="4" required>
+          <label class="form-check-label small" for="agreement">
+            Agree to terms and conditions
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary fw-bold text-uppercase" tabindex="5">submit</button>
+      </form>
+    </div>
+  </main>
+
+  <%- include('partials/script.ejs') %>
+</body>
+
+</html>
