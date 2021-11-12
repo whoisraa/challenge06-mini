@@ -75,8 +75,8 @@ router.post('/', async (req, res) => {
                 success: null
             });
         } else if (error) {
-            res.status(500).send(`Internal server error`);
             console.error(error);
+            return res.status(500).send(`Internal server error`);
         }
     }
 });
